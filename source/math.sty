@@ -1,0 +1,30 @@
+\usepackage{amsmath}
+\usepackage{bm}
+\usepackage{amsthm}
+\usepackage{type1cm}
+\usepackage{amssymb}
+\usepackage{mathtools} 
+\theoremstyle{definition}
+\newtheorem{theorem}{Theorem}
+\newtheorem*{theorem*}{Theorem}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem*{definition*}{Definition}
+\newtheorem{problem}[theorem]{Problem}
+\newtheorem*{problem*}{Problem}
+\renewcommand{\proofname}{Proof}
+\usepackage{ulem}
+\usepackage{newtxmath}
+\usepackage{bm}
+
+\newcommand{\argmax}{\mathop{\rm argmax}\limits}
+\newcommand{\argmin}{\mathop{\rm argmin}\limits}
+\newcommand{\real}{\mathbb{R}}
+\newcommand{\complex}{\mathbb{C}}
+\newcommand{\doublehat}[1]{
+  \begingroup
+    \let\macc@kerna\z@
+    \let\macc@kernb\z@
+    \let\macc@nucleus\@empty
+    \hat{\raisebox{.35ex}{\vphantom{\ensuremath{#1}}}\smash{\hat{#1}}}
+  \endgroup
+}

@@ -1,0 +1,133 @@
+% color definision
+\definecolor{primary}{HTML}{073365}
+\definecolor{primary-light}{HTML}{F7581D}
+\definecolor{primary-dark}{HTML}{000051}
+\definecolor{secondary}{HTML}{F7581D}
+\definecolor{secondary-light}{HTML}{ffff72}
+\definecolor{secondary-dark}{HTML}{c8b900}
+\definecolor{item-second}{HTML}{61AD97}
+\definecolor{item-third}{HTML}{9C9CA1}
+
+% color from tailwindcss
+\definecolor{blue-500}{HTML}{3b82f6}
+\definecolor{sky-500}{HTML}{0ea5e9}
+\definecolor{indigo-700}{HTML}{4338ca}
+
+% set color theme
+\usetheme[numbering=fraction]{metropolis}
+\setbeamercolor{frametitle}{bg=primary}
+\setbeamercolor{title separator}{fg=secondary}
+\setbeamercolor{progress bar in section page}{fg=secondary}
+\setbeamercolor{structure}{fg=primary}
+%\setbeamercolor{alerted text}{fg=secondary}
+%\setbeamercolor{example text}{fg=primary}
+%\setbeamercolor{block title}{fg=primary}
+%\setbeamercolor{primaybox}{}
+%\setbeamercolor{block title}{fg=black,bg=primary!50!white}
+%\setbeamercolor{block body}{bg=primary}
+\setbeamertemplate{itemize item}{\color{primary}$\blacksquare$}
+\setbeamertemplate{itemize subitem}{\color{item-second}$\bullet$}
+\setbeamertemplate{itemize subsubitem}{\color{item-third}$\blacktriangleright$}
+
+\setbeamertemplate{frame footer}{My custom Footer}
+
+% slide x margin
+\setbeamersize
+{
+    text margin left=8pt,
+    text margin right=8pt
+}
+
+
+% \metroset{block=fill}
+
+\usepackage{xcolor}
+\usepackage{framed}
+\usepackage{tcolorbox}
+\tcbuselibrary{raster,skins}
+\tcbuselibrary{theorems, skins}
+\usepackage{tikz}
+\usetikzlibrary{shapes,decorations,decorations.pathreplacing,positioning}
+
+\newcommand{\highlightbox}[2]{
+    \tcboxmath
+    [
+        colback=#1!10,
+        colframe=#1,
+        sharp corners,
+    ]
+    {#2}
+}
+
+\newcommand{\textbox}[3]{
+    \tcboxmath
+    [
+        enhanced,
+        frame hidden,
+        colback=#1!10,
+        overlay={
+            \node[below,#1] at (frame.south) {#3};
+        }
+    ]
+    {#2}
+}
+
+\newcommand{\textunderbrace}[3]{
+    \tcboxmath[
+        enhanced,
+        frame hidden,
+        interior hidden,
+        size=minimal,
+        overlay={
+            \draw[
+                #1,
+                thick,
+                decorate,
+                decoration={
+                    brace,            % 中括弧を書く
+                    amplitude=6pt,    % 中括弧がとがる幅
+                    raise=2pt         % 中括弧をズラす
+                }
+            ] (frame.south east) -- (frame.south west)
+                node[midway,below=8pt] {#3};
+        }
+    ]
+    {#2}
+}
+
+% Japanese
+\usepackage{bxdpx-beamer}
+\usepackage{minijs}%和文用
+\renewcommand{\kanjifamilydefault}{\gtdefault}%和文用
+
+% slinde visual
+\usefonttheme{professionalfonts}
+\setbeamertemplate{frametitle}[default][center]
+\setbeamertemplate{navigation symbols}{}
+\setbeamercovered{transparent}
+\setbeamertemplate{footline}[page number]
+\setbeamerfont{footline}{size=\normalsize,series=\bfseries}
+\setbeamerfont{footline}{size=\normalsize}
+\setbeamercolor{footline}{fg=black,bg=black}
+
+% table style ?
+\usepackage{graphicx}
+\usepackage{float}
+
+% bibtex
+\usepackage[numbers]{natbib}
+\usepackage{bibentry}
+% \bibliography{biblo}
+\nobibliography*
+\newcommand{\footcite}[1]{\footnote{\citet*{#1}}}
+
+% \usepackage[dvipdfmx]{hyperref}
+\usepackage{pxjahyper}
+\usepackage{caption}
+
+\setbeamertemplate{caption}[numbered]
+\captionsetup[figure]{format=plain, labelformat=simple, labelsep=period, font=footnotesize}
+\captionsetup[table]{format=plain, labelformat=simple, labelsep=period, font={sc, footnotesize}}
+
+\usepackage{url}
+\usepackage{color}

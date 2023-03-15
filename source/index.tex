@@ -1,0 +1,45 @@
+\documentclass[uplatex,dvipdfmx,10pt,notheorems]{beamer}
+
+\usepackage{math}
+\usepackage{slide}
+
+% section outline
+% \AtBeginSection[]{
+%     \begin{frame}
+%         \frametitle{Outline}
+%         \tableofcontents[currentsection, currentsubsection]
+%     \end{frame}
+% }
+
+\title[ti]{ sample }
+\author[name]{sample}
+\institute[sample]{sample}
+\date{\today}
+
+\begin{document}
+
+\begin{frame}
+    \frametitle{}
+    \titlepage
+\end{frame}
+
+\begin{frame}
+    \frametitle{Outline}
+    \tableofcontents
+\end{frame}
+
+\section{sample}
+\begin{frame}
+    \frametitle{sample}
+    \begin{itemize}
+        \item sample
+        \item sample \footcite{sample_2017}
+    \end{itemize}
+\end{frame}
+
+\begin{frame}[allowframebreaks]
+    \bibliographystyle{abbrvnat}
+    \bibliography{ref}
+\end{frame}
+
+\end{document}
